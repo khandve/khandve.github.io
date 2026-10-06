@@ -3,32 +3,290 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Portfolio</title>
+  <title>Varsha Khandve | Senior iOS Developer</title>
+  <meta name="description" content="Varsha Khandve - Senior iOS Developer with 10+ years of experience in Swift, SwiftUI, UIKit and Clean Architecture. Based in Pune, India.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Web Developer | Designer | Student</p>
+
+  <nav class="nav">
+    <a href="#home" class="logo">VK.</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+  </nav>
+
+  <header id="home" class="hero">
+    <!-- Optional: add your photo as photo.jpg in the repo and uncomment the line below
+    <img src="photo.jpg" alt="Varsha Khandve" class="avatar">
+    -->
+    <p class="eyebrow">Hello, I'm</p>
+    <h1>Varsha Khandve</h1>
+    <p class="role">Senior iOS Developer · Technical Architect</p>
+    <p class="tagline">
+      10+ years building enterprise-grade iOS apps with Swift, SwiftUI and UIKit across
+      ticketing, travel, banking, gaming and healthcare.
+    </p>
+    <div class="hero-buttons">
+      <a href="#experience" class="btn primary">View experience</a>
+      <a href="#contact" class="btn">Get in touch</a>
+    </div>
+    <ul class="stats">
+      <li><strong>10+</strong><span>Years of experience</span></li>
+      <li><strong>80%+</strong><span>Unit test coverage</span></li>
+      <li><strong>5</strong><span>Industry domains</span></li>
+    </ul>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>A short intro about who you are and what you do.</p>
-  </section>
+  <main>
+    <section id="about" class="section">
+      <h2>About me</h2>
+      <p>
+        I'm a Senior iOS Developer based in Pune, India, with over a decade of experience designing,
+        developing and maintaining production applications in Swift, SwiftUI and UIKit, including
+        SwiftUI/UIKit interoperability. I'm strong in Swift Concurrency, Clean Architecture, MVVM and VIPER,
+        and in building modular, reusable components and SDKs.
+      </p>
+      <p>
+        I've integrated RESTful APIs with robust error handling and implemented secure authentication
+        using Keychain, OAuth 2.0 / OpenID Connect and Face ID / Touch ID under strict regulatory
+        compliance in banking. I drive architecture and code reviews, Jenkins CI/CD and App Store /
+        TestFlight releases, and I mentor engineers across Sports &amp; Ticketing, Travel, FinTech / Banking,
+        Casino Gaming and Healthcare EMR domains.
+      </p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project One</h3>
-      <p>What it does and what tech you used.</p>
-      <a href="https://github.com/yourusername/project-one">View on GitHub</a>
-    </div>
-  </section>
+    <section id="skills" class="section">
+      <h2>Technical skills</h2>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3>Swift &amp; UI</h3>
+          <ul class="chips">
+            <li>Swift</li><li>SwiftUI</li><li>UIKit</li><li>SwiftUI/UIKit interop</li>
+            <li>Objective-C</li><li>Custom iOS SDKs</li><li>Auto Layout</li><li>Dynamic Type</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Concurrency &amp; Memory</h3>
+          <ul class="chips">
+            <li>async/await</li><li>Structured concurrency</li><li>Combine</li><li>ARC</li><li>Retain cycle resolution</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Architecture &amp; Design</h3>
+          <ul class="chips">
+            <li>Clean Architecture</li><li>MVVM</li><li>VIPER</li><li>MVC</li>
+            <li>Repository Pattern</li><li>SOLID</li><li>Modular design</li><li>System design</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Networking &amp; Navigation</h3>
+          <ul class="chips">
+            <li>RESTful APIs</li><li>SOAP</li><li>Deep Links</li><li>Universal Links</li>
+            <li>Caching</li><li>Error handling</li><li>WebViews</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Security &amp; Auth</h3>
+          <ul class="chips">
+            <li>Keychain</li><li>OAuth 2.0 / OpenID Connect</li><li>Face ID / Touch ID</li>
+            <li>Biometric auth</li><li>Custom security SDKs</li><li>Secure token storage</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Persistence &amp; Integrations</h3>
+          <ul class="chips">
+            <li>CoreData</li><li>Firebase (Analytics, Crashlytics, Remote Config)</li>
+            <li>New Relic SDK</li><li>Push notifications</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>DevOps, Tools &amp; Testing</h3>
+          <ul class="chips">
+            <li>Xcode</li><li>XCTest</li><li>XCUITest</li><li>Git</li><li>Jenkins CI/CD</li>
+            <li>Swift Package Manager</li><li>App Store Connect</li><li>TestFlight</li>
+            <li>Jira</li><li>Agile/Scrum</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: you@example.com</p>
-  </section>
+    <section id="experience" class="section">
+      <h2>Professional experience</h2>
+      <div class="timeline">
+
+        <article class="job">
+          <div class="job-head">
+            <h3>Technical Architect / Lead iOS Engineer</h3>
+            <p class="company">Globant</p>
+            <p class="date">Oct 2024 – Present · Pune, India</p>
+          </div>
+          <ul>
+            <li><strong>Ahlan (Sports &amp; Events Ticketing):</strong> architected scalable front-end and core iOS framework structures with Clean Architecture, separating Presentation, Domain and Data layers.</li>
+            <li>Built dynamic ticketing accessibility workflows: accessibility request form, wheelchair/companion seating selection and proof upload.</li>
+            <li>Designed public SDK APIs to be scalable, maintainable and backward compatible, so consuming apps could adopt new releases without breaking changes.</li>
+            <li>Built reusable custom UI SDK components with responsive layouts and native Right-to-Left (RTL) support, directly from Figma designs.</li>
+            <li>Integrated REST APIs with robust error handling and thread safety using Swift Concurrency and Combine; implemented Deep Links / Universal Links and managed dependencies with Swift Package Manager.</li>
+            <li><strong>Travel &amp; Destination Booking:</strong> architected a full-featured booking framework in Swift and SwiftUI using MVVM and Clean Architecture, with a custom image caching SDK and smooth multi-screen transitions.</li>
+            <li><strong>RedSea Luxury Destination Booking:</strong> built luxury booking interfaces in SwiftUI with integrated analytics tracking across onboarding and resort checkout.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3>Lead iOS Engineer / Senior Software Engineer</h3>
+            <p class="company">Light &amp; Wonder</p>
+            <p class="date">Jul 2023 – Aug 2024 · Pune, India</p>
+          </div>
+          <ul>
+            <li><strong>Casino Gaming – Tropicana PA:</strong> developed core UI and gaming SDK workflows with SwiftUI and MVVM for high-performance mobile gaming apps.</li>
+            <li>Integrated real-time REST APIs, New Relic SDK for live telemetry, and Firebase for remote configuration and crash reporting.</li>
+            <li>Automated Jenkins CI/CD build and deployment pipelines, significantly cutting release timelines.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3>Solution Architect / Senior iOS Engineer</h3>
+            <p class="company">IBM</p>
+            <p class="date">May 2021 – Jul 2023 · Pune, India</p>
+          </div>
+          <ul>
+            <li><strong>Barclays Mobile Banking:</strong> architected sign-up and secure authentication modules under strict regulatory compliance, using Keychain, OAuth 2.0 and Face ID / Touch ID, built with modular Swift frameworks and custom security SDKs.</li>
+            <li>Enforced Clean Architecture and SOLID principles, raising unit test coverage to 80%+ with XCTest and XCUITest.</li>
+            <li>Led code reviews, conducted vulnerability assessments and mentored junior iOS developers.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3>Senior iOS Developer</h3>
+            <p class="company">Magna Infotech (Client: Tata Consultancy Services)</p>
+            <p class="date">May 2018 – May 2020 · Pune, India</p>
+          </div>
+          <ul>
+            <li><strong>Go365 (Humana Inc):</strong> built healthcare wellness workflows connecting native iOS frameworks with web journeys via REST APIs for a leading health insurer.</li>
+            <li>Managed app-to-web transitions and worked directly with product stakeholders to gather technical requirements.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3>Consultant (iOS Developer)</h3>
+            <p class="company">Ohum Health Care Solutions Pvt. Ltd.</p>
+            <p class="date">Feb 2016 – Apr 2018 · Pune, India</p>
+          </div>
+          <ul>
+            <li><strong>OhumDoc (iPad Clinical EMR):</strong> moved clinical workflows onto an iPad app interfacing with the VistA EMR system to improve patient safety and clinical outcomes.</li>
+            <li>Remodeled UI screens based on physician feedback, optimized networking with AFNetworking and resolved clinical data vulnerabilities.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Selected projects</h2>
+      <div class="grid">
+
+        <article class="card">
+          <h3>Ahlan</h3>
+          <p>Sports and events ticketing platform with accessibility-first seating workflows, a backward-compatible public SDK and RTL support. Available on the App Store.</p>
+          <p class="tech">Swift · SwiftUI · Clean Architecture · REST</p>
+        </article>
+
+        <article class="card">
+          <h3>Barclays Mobile Banking</h3>
+          <p>Secure sign-up and authentication for enterprise banking with Keychain, OAuth 2.0 and biometrics, backed by 80%+ test coverage.</p>
+          <p class="tech">Swift · UIKit · Security SDKs · XCTest</p>
+        </article>
+
+        <article class="card">
+          <h3>Travel &amp; Destination Booking</h3>
+          <p>Full-featured booking framework with modular architecture, custom image caching and smooth media playback.</p>
+          <p class="tech">Swift · SwiftUI · MVVM · Clean Architecture</p>
+        </article>
+
+        <article class="card">
+          <h3>Tropicana PA Casino Gaming</h3>
+          <p>High-performance gaming app with live telemetry, remote config and automated CI/CD releases.</p>
+          <p class="tech">SwiftUI · MVVM · Firebase · Jenkins</p>
+        </article>
+
+        <article class="card">
+          <h3>OhumDoc</h3>
+          <p>iPad clinical EMR application integrated with VistA to support physicians' daily workflows.</p>
+          <p class="tech">Objective-C · Swift · AFNetworking · UIKit</p>
+        </article>
+
+        <article class="card">
+          <h3>Earlier mobile apps (2014–2016)</h3>
+          <p><strong>GoBarber:</strong> barber discovery with MapKit and booking. <strong>OurNature:</strong> offline-first GPS tree tracking with SQLite. <strong>Binsta &amp; ExpoExhibitors:</strong> real-time chat, offline sync and push notifications.</p>
+          <p class="tech">Swift · Objective-C · MapKit · SQLite</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Education &amp; certifications</h2>
+      <div class="grid two">
+        <article class="card">
+          <h3>Master of Computer Applications (MCA)</h3>
+          <p>Nowrosjee Wadia College, Pune · 2014</p>
+        </article>
+        <article class="card">
+          <h3>B.Sc (Mathematics)</h3>
+          <p>Nowrosjee Wadia College, Pune · 2011</p>
+        </article>
+      </div>
+      <ul class="certs">
+        <li>iOS Design Essentials – IBM</li>
+        <li>MVVM Design Pattern in iOS using SwiftUI – Udemy</li>
+        <li>Swift Intermediate &amp; Advanced – Udemy</li>
+        <li>Level Up in Auto Layout – Swift &amp; iOS – Udemy</li>
+        <li>Build ChatGPT App for iOS/macOS with SwiftUI – Udemy</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Open to senior iOS and architecture roles, and to interesting collaborations. Let's talk.</p>
+      <div class="contact-links">
+        <a class="btn primary" href="mailto:varshakhandve99@gmail.com">varshakhandve99@gmail.com</a>
+        <a class="btn" href="https://linkedin.com/in/varshakhandve" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download resume</a>
+      </div>
+      <p class="location">📍 Pune, Maharashtra, India</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Varsha Khandve. Built with HTML &amp; CSS, hosted on GitHub Pages.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const root = document.documentElement;
+    try {
+      const saved = localStorage.getItem('theme');
+      if (saved) root.setAttribute('data-theme', saved);
+    } catch (e) {}
+
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      const dark = root.getAttribute('data-theme') === 'dark' ||
+        (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
+      const next = dark ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  </script>
 </body>
 </html>
