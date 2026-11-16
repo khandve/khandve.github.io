@@ -1,0 +1,52 @@
+// Theme toggle (remembers choice)
+const root = document.documentElement;
+try { const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; } catch (e) {}
+document.getElementById('themeBtn').addEventListener('click', () => {
+  const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+  root.dataset.theme = next;
+  try { localStorage.setItem('theme', next); } catch (e) {}
+});
+
+// Custom cursor
+const ring = document.getElementById('cursorRing');
+let tx = 0, ty = 0, cx = 0, cy = 0;
+window.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; });
+(function loop() {
+  cx += (tx - cx) * 0.18; cy += (ty - cy) * 0.18;
+  ring.style.left = cx + 'px'; ring.style.top = cy + 'px';
+  requestAnimationFrame(loop);
+})();
+
+// Nav state + active link
+const nav = document.getElementById('nav');
+const links = [...document.querySelectorAll('.nav-links a')];
+const sections = links.map(a => document.querySelector(a.getAttribute('href')));
+function onScroll() {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+  let current = -1;
+  sections.forEach((s, i) => { if (s && s.getBoundingClientRect().top < window.innerHeight * 0.4) current = i; });
+  links.forEach((a, i) => a.classList.toggle('active', i === current));
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// Reveal on scroll
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Count-up stats
+const statIO = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, end = +el.dataset.count, suf = el.dataset.suffix, start = performance.now();
+    (function tick(t) {
+      const p = Math.min((t - start) / 1200, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suf;
+      if (p < 1) requestAnimationFrame(tick);
+    })(start);
+    statIO.unobserve(el);
+  });
+}, { threshold: 0.6 });
+document.querySelectorAll('[data-count]').forEach(el => statIO.observe(el));
