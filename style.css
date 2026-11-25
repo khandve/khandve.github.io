@@ -109,6 +109,12 @@ strong{color:var(--strong);font-weight:600}
 .p-body{padding:30px 32px}
 .p-body p{color:var(--muted);font-size:16.5px;line-height:1.85;margin-bottom:22px}
 
+.store-btn{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:11px 22px;border-radius:99px;background:var(--btn);color:#fff;font-weight:600;font-size:15px;transition:.25s;box-shadow:0 8px 26px rgba(124,58,224,.3)}
+.store-btn:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.store-btn .ap{font-family:-apple-system,'SF Pro Text',sans-serif}
+.store-btn .ap::before{content:"\F8FF"}
+@supports not (-webkit-hyphens:none){.store-btn .ap::before{content:"⬇"}}
+.card.flat .store-btn{margin-top:16px}
 .certs{list-style:none;margin-top:36px;display:grid;gap:14px}
 .certs li{color:var(--muted);padding-left:38px;position:relative;font-size:18px}
 .certs li::before{content:"✓";position:absolute;left:0;top:2px;width:24px;height:24px;border-radius:50%;background:var(--green);color:#07060f;font-size:14px;font-weight:800;display:grid;place-items:center}
